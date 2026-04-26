@@ -1,4 +1,4 @@
-import { Code2, Facebook, Instagram, Mail, MessageCircle, Sparkles, ArrowRight } from "lucide-react";
+import { Code2, Facebook, Instagram, Mail, MessageCircle, Sparkles, ArrowRight, Globe } from "lucide-react";
 import { dev, waLink, mailLink } from "@/lib/contact";
 
 export const DeveloperSection = () => {
