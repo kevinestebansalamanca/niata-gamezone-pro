@@ -1,7 +1,7 @@
 import { Trophy, Users, Clock, PartyPopper } from "lucide-react";
 
 const services = [
-  { icon: Clock, title: "Alquiler por horas", desc: "Tarifas claras desde $3.000 la hora. Sin sorpresas." },
+  { icon: Clock, title: "Alquiler por horas", desc: "Tarifas claras: $4.000 la hora o $2.000 la media hora. Sin sorpresas." },
   { icon: Users, title: "Multijugador local", desc: "Hasta 4 controles. La rivalidad sana hace al gamer." },
   { icon: Trophy, title: "Torneos semanales", desc: "FIFA, Mortal Kombat y más. Premios reales." },
   { icon: PartyPopper, title: "Eventos & cumpleaños", desc: "Reserva la sala completa para tu plan especial." },
