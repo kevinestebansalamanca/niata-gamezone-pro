@@ -34,7 +34,7 @@ export const Consoles = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {consoles.map((c) => {
             const Icon = c.icon;
             return (
