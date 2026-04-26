@@ -14,7 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      timers: {
+        Row: {
+          client_name: string
+          console: string
+          created_at: string
+          ends_at: string
+          finished: boolean
+          hours: number
+          id: string
+          notes: string | null
+          notified: boolean
+          started_at: string
+          updated_at: string
+        }
+        Insert: {
+          client_name: string
+          console: string
+          created_at?: string
+          ends_at: string
+          finished?: boolean
+          hours: number
+          id?: string
+          notes?: string | null
+          notified?: boolean
+          started_at?: string
+          updated_at?: string
+        }
+        Update: {
+          client_name?: string
+          console?: string
+          created_at?: string
+          ends_at?: string
+          finished?: boolean
+          hours?: number
+          id?: string
+          notes?: string | null
+          notified?: boolean
+          started_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

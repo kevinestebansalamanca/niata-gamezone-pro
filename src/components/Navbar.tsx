@@ -1,5 +1,6 @@
-import { Gamepad2, Menu, X } from "lucide-react";
+import { Gamepad2, Menu, X, Lock } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const links = [
   { label: "Inicio", href: "#inicio" },
@@ -51,12 +52,22 @@ export const Navbar = () => {
           ))}
         </ul>
 
-        <a
-          href="#reserva"
-          className="hidden md:inline-flex items-center px-5 py-2.5 rounded-lg bg-gradient-neon text-primary-foreground font-bold text-sm uppercase tracking-wider shadow-neon hover:scale-105 transition-smooth"
-        >
-          Reservar
-        </a>
+        <div className="hidden md:flex items-center gap-3">
+          <Link
+            to="/login"
+            aria-label="Acceso privado"
+            title="Acceso privado"
+            className="grid place-items-center w-10 h-10 rounded-lg border border-border text-muted-foreground hover:text-primary hover:border-primary transition-smooth"
+          >
+            <Lock className="w-4 h-4" />
+          </Link>
+          <a
+            href="#reserva"
+            className="inline-flex items-center px-5 py-2.5 rounded-lg bg-gradient-neon text-primary-foreground font-bold text-sm uppercase tracking-wider shadow-neon hover:scale-105 transition-smooth"
+          >
+            Reservar
+          </a>
+        </div>
 
         <button
           onClick={() => setOpen(!open)}
