@@ -1,5 +1,5 @@
 import { ArrowRight, Sparkles, Zap } from "lucide-react";
-import heroImg from "@/assets/hero-gamezone.jpg";
+import heroImg from "@/assets/hero-gamezone.webp";
 import { owner, waLink } from "@/lib/contact";
 
 export const Hero = () => {
@@ -15,6 +15,8 @@ export const Hero = () => {
           alt="Sala gamer premium GameZone La Niata"
           width={1920}
           height={1080}
+          fetchPriority="high"
+          decoding="async"
           className="w-full h-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background" />
@@ -91,6 +93,8 @@ export const Hero = () => {
               alt="Setup gamer"
               width={900}
               height={900}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
