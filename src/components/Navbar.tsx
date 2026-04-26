@@ -1,5 +1,6 @@
-import { Gamepad2, Menu, X } from "lucide-react";
+import { Gamepad2, Menu, X, Lock } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const links = [
   { label: "Inicio", href: "#inicio" },
