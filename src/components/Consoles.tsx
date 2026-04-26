@@ -1,26 +1,19 @@
-import { Gamepad, Joystick, Tv } from "lucide-react";
+import { Gamepad, Joystick } from "lucide-react";
 
 const consoles = [
   {
     icon: Gamepad,
-    name: "PlayStation 5",
-    tagline: "Última generación",
-    games: ["FIFA 25", "God of War", "Spider-Man 2", "Mortal Kombat 1"],
+    name: "PlayStation 3",
+    tagline: "Clásico imbatible",
+    games: ["FIFA", "GTA V", "Mortal Kombat", "Naruto Storm"],
     color: "primary",
   },
   {
     icon: Joystick,
-    name: "Xbox Series",
-    tagline: "Potencia 4K",
-    games: ["Halo Infinite", "Forza Horizon", "Gears 5", "Call of Duty"],
+    name: "Xbox 360",
+    tagline: "Acción sin límites",
+    games: ["Halo", "Forza", "Gears of War", "Call of Duty"],
     color: "accent",
-  },
-  {
-    icon: Tv,
-    name: "PlayStation 4",
-    tagline: "Clásicos infaltables",
-    games: ["FIFA 24", "GTA V", "UFC", "Naruto Storm"],
-    color: "secondary",
   },
 ];
 
@@ -41,7 +34,7 @@ export const Consoles = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {consoles.map((c) => {
             const Icon = c.icon;
             return (

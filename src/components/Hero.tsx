@@ -43,7 +43,7 @@ export const Hero = () => {
           </h1>
 
           <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-            <span className="font-bold text-foreground">GameZone La Niata</span> es la sala gamer premium del campo casanareño. PlayStation, Xbox, torneos y la mejor energía. Reserva tu hora con{" "}
+            <span className="font-bold text-foreground">GameZone La Niata</span> es la sala gamer del campo casanareño. PlayStation 3, Xbox 360, torneos y la mejor energía. Reserva tu hora con{" "}
             <span className="text-primary font-semibold">{owner.name}</span>.
           </p>
 

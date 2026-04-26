@@ -1,4 +1,4 @@
-import { Code2, Facebook, Instagram, Mail, MessageCircle, Sparkles, ArrowRight } from "lucide-react";
+import { Code2, Facebook, Instagram, Mail, MessageCircle, Sparkles, ArrowRight, Globe } from "lucide-react";
 import { dev, waLink, mailLink } from "@/lib/contact";
 
 export const DeveloperSection = () => {
@@ -119,9 +119,9 @@ export const DeveloperSection = () => {
               </a>
             </div>
 
-            {/* Big CTA */}
+            {/* Big CTA → portfolio */}
             <a
-              href={waLink(dev.phone, dev.whatsappMessage)}
+              href={dev.portfolio}
               target="_blank"
               rel="noopener noreferrer"
               className="group/cta relative flex items-center justify-between gap-4 p-6 rounded-2xl bg-gradient-neon text-primary-foreground font-display font-bold uppercase tracking-wider shadow-neon hover:scale-[1.02] active:scale-[0.99] transition-smooth overflow-hidden"
@@ -137,7 +137,17 @@ export const DeveloperSection = () => {
               <ArrowRight className="relative w-6 h-6 group-hover/cta:translate-x-2 transition-smooth" />
             </a>
 
-            <p className="text-center text-xs uppercase tracking-[0.3em] text-muted-foreground mt-6">
+            <a
+              href={dev.portfolio}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 flex items-center justify-center gap-2 text-xs uppercase tracking-[0.3em] text-primary hover:text-secondary transition-smooth"
+            >
+              <Globe className="w-3.5 h-3.5" />
+              ksnovastudios-salamanca-portfolios.vercel.app
+            </a>
+
+            <p className="text-center text-xs uppercase tracking-[0.3em] text-muted-foreground mt-4">
               Desarrollo web · Yopal · Casanare · Colombia
             </p>
           </div>
