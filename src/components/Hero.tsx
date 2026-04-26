@@ -108,7 +108,8 @@ export const Hero = () => {
                   <div className="text-xs uppercase tracking-widest text-muted-foreground">
                     Desde
                   </div>
-                  <div className="font-display font-bold">$3.000 / hora</div>
+                  <div className="font-display font-bold">$4.000 / hora</div>
+                  <div className="text-xs text-muted-foreground">$2.000 / media hora</div>
                 </div>
               </div>
             </div>
