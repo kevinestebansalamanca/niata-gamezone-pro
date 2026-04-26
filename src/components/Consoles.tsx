@@ -1,6 +1,6 @@
 import { Gamepad, Joystick } from "lucide-react";
-import psImage from "@/assets/console-playstation.jpg";
-import xboxImage from "@/assets/console-xbox.jpg";
+import psImage from "@/assets/console-playstation.webp";
+import xboxImage from "@/assets/console-xbox.webp";
 
 const consoles = [
   {
@@ -57,9 +57,10 @@ export const Consoles = () => {
                   <img
                     src={c.image}
                     alt={`${c.name} — héroes y juegos`}
-                    width={1536}
-                    height={1024}
+                    width={1200}
+                    height={750}
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Bottom fade */}

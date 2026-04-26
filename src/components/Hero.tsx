@@ -1,5 +1,5 @@
 import { ArrowRight, Sparkles, Zap } from "lucide-react";
-import heroImg from "@/assets/hero-gamezone.jpg";
+import heroImg from "@/assets/hero-gamezone.webp";
 import { owner, waLink } from "@/lib/contact";
 
 export const Hero = () => {
