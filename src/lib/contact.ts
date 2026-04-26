@@ -22,6 +22,7 @@ export const dev = {
     "https://www.instagram.com/kevxs.gzr?igsh=MWh4M2JiNWd2bjBtbg==",
   whatsappMessage:
     "Hola Kevin, vi tu desarrollo web en GameZone La Niata y quiero información sobre páginas web profesionales.",
+  portfolio: "https://ksnovastudios-salamanca-portfolios.vercel.app",
 };
 
 export const waLink = (phone: string, text: string) =>
