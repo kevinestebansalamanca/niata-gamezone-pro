@@ -1,96 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* GameZone La Niata — Premium Gaming Design System
+   All colors are HSL. Use semantic tokens only. */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core gamer palette */
+    --background: 230 35% 5%;
+    --foreground: 180 20% 96%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 230 30% 8%;
+    --card-foreground: 180 20% 96%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 230 30% 8%;
+    --popover-foreground: 180 20% 96%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Neon cyan primary */
+    --primary: 180 100% 55%;
+    --primary-foreground: 230 50% 6%;
+    --primary-glow: 180 100% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Magenta secondary */
+    --secondary: 320 100% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-glow: 320 100% 70%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 230 25% 14%;
+    --muted-foreground: 220 15% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Electric purple accent */
+    --accent: 270 95% 65%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 230 30% 18%;
+    --input: 230 30% 14%;
+    --ring: 180 100% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.875rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Brand socials */
+    --facebook: 220 90% 56%;
+    --instagram-from: 290 90% 55%;
+    --instagram-via: 340 90% 60%;
+    --instagram-to: 30 95% 60%;
+    --whatsapp: 142 70% 49%;
+    --email-cyan: 190 95% 55%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gradients */
+    --gradient-hero: radial-gradient(ellipse at top, hsl(270 95% 25% / 0.55), transparent 60%),
+                     radial-gradient(ellipse at bottom right, hsl(320 100% 40% / 0.35), transparent 60%),
+                     radial-gradient(ellipse at bottom left, hsl(180 100% 35% / 0.35), transparent 60%),
+                     linear-gradient(180deg, hsl(230 40% 4%), hsl(230 35% 6%));
+    --gradient-neon: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)) 50%, hsl(var(--secondary)));
+    --gradient-card: linear-gradient(155deg, hsl(230 35% 11% / 0.9), hsl(230 35% 7% / 0.95));
+    --gradient-instagram: linear-gradient(135deg, hsl(var(--instagram-from)), hsl(var(--instagram-via)) 50%, hsl(var(--instagram-to)));
+    --gradient-dev: linear-gradient(135deg, hsl(180 100% 50% / 0.15), hsl(270 95% 65% / 0.15) 50%, hsl(320 100% 60% / 0.15));
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows / glows */
+    --shadow-neon: 0 0 24px hsl(var(--primary) / 0.45), 0 0 60px hsl(var(--primary) / 0.25);
+    --shadow-magenta: 0 0 24px hsl(var(--secondary) / 0.45), 0 0 60px hsl(var(--secondary) / 0.25);
+    --shadow-accent: 0 0 24px hsl(var(--accent) / 0.45), 0 0 60px hsl(var(--accent) / 0.2);
+    --shadow-elevated: 0 25px 60px -20px hsl(230 80% 2% / 0.8), 0 0 0 1px hsl(var(--border));
+    --shadow-card-hover: 0 30px 80px -20px hsl(var(--primary) / 0.35), 0 0 0 1px hsl(var(--primary) / 0.4);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Motion */
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 230 35% 6%;
+    --sidebar-foreground: 180 20% 96%;
+    --sidebar-primary: 180 100% 55%;
+    --sidebar-primary-foreground: 230 50% 6%;
+    --sidebar-accent: 230 25% 12%;
+    --sidebar-accent-foreground: 180 20% 96%;
+    --sidebar-border: 230 30% 18%;
+    --sidebar-ring: 180 100% 55%;
   }
 }
 
@@ -99,7 +89,115 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Rajdhani', system-ui, sans-serif;
+    background-image: var(--gradient-hero);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.4);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  .text-gradient-neon {
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glass-panel {
+    background: var(--gradient-card);
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .neon-border {
+    position: relative;
+    isolation: isolate;
+  }
+  .neon-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--gradient-neon);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    opacity: 0.6;
+    transition: opacity 400ms var(--transition-smooth);
+    pointer-events: none;
+  }
+  .neon-border:hover::before {
+    opacity: 1;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(var(--primary) / 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.07) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+}
+
+@layer utilities {
+  .shadow-neon { box-shadow: var(--shadow-neon); }
+  .shadow-magenta { box-shadow: var(--shadow-magenta); }
+  .shadow-accent-glow { box-shadow: var(--shadow-accent); }
+  .shadow-elevated { box-shadow: var(--shadow-elevated); }
+  .bg-gradient-neon { background: var(--gradient-neon); }
+  .bg-gradient-dev { background: var(--gradient-dev); }
+  .bg-gradient-instagram { background: var(--gradient-instagram); }
+  .transition-smooth { transition: all 400ms var(--transition-smooth); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.4), 0 0 40px hsl(var(--primary) / 0.2); }
+  50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.7), 0 0 80px hsl(var(--primary) / 0.4); }
+}
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes ripple {
+  0% { transform: scale(0); opacity: 0.6; }
+  100% { transform: scale(4); opacity: 0; }
+}
+
+.animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+.animate-shimmer {
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .animate-float-slow,
+  .animate-pulse-glow {
+    animation: none;
   }
 }
